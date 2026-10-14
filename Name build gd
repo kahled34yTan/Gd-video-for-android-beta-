@@ -1,0 +1,17 @@
+name: Build GD Video Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+
+      - name: Show project files
+        run: |
+          echo "GD Video Lab project loaded"
+          find . -maxdepth 3 -type f
